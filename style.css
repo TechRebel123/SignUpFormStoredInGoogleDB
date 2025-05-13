@@ -1,0 +1,153 @@
+    :root {
+      --bg: #fafafa;
+      --text: #262626;
+      --input-bg: #fff;
+      --border: #dbdbdb;
+      --link: #3897f0;
+      --fb: #385185;
+    }
+    body.dark {
+      --bg: #121212;
+      --text: #f1f1f1;
+      --input-bg: #1e1e1e;
+      --border: #333;
+      --link: #4e9fff;
+      --fb: #7ab0ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      transition: all 0.3s ease;
+    }
+
+    .main {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: var(--input-bg);
+      border: 1px solid var(--border);
+      padding: 40px 30px;
+      text-align: center;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .logo {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .intro-text {
+      color: #8e8e8e;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+      border: 1px solid var(--border);
+      background-color: var(--input-bg);
+      color: var(--text);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    input::placeholder {
+      color: #999;
+    }
+
+    .signup-btn {
+      background-color: var(--link);
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      font-weight: bold;
+      margin-top: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .signup-btn:hover {
+      background-color: #318ce7;
+    }
+
+    .or-divider {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+    }
+
+    .line {
+      flex: 1;
+      height: 1px;
+      background-color: var(--border);
+    }
+
+    .or {
+      margin: 0 10px;
+      font-size: 12px;
+      color: #8e8e8e;
+      font-weight: bold;
+    }
+
+    .fb-login {
+      color: var(--fb);
+      font-weight: bold;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    .forgot {
+      font-size: 12px;
+      color: var(--link);
+      margin-top: 10px;
+    }
+
+    .bottom-box {
+      margin-top: 20px;
+      border: 1px solid var(--border);
+      padding: 20px;
+      font-size: 14px;
+      text-align: center;
+      background: var(--input-bg);
+      border-radius: 8px;
+    }
+
+    .bottom-box a {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .dark-toggle {
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 12px;
+      color: var(--link);
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 30px 20px;
+      }
+    }
